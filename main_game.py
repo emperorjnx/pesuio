@@ -56,17 +56,13 @@ print('\nCongratulations The lord of death has given you a second chance\n')
 
 with open('scene-2.txt','r') as scene:
         print(scene.read())
-
 print('\nDo you want to help the detective\n')
 choice=input()
 if 'y' in choice:
     with open('scene-3.txt','r') as scene:
         three = scene.readlines()
-    for i in three:
-        sum=0
-        if sum<=4:
-            print(i)
-            sum=sum + 1
+    for i in range(0,5):
+        print(three[i])
     print('\nDo you want to help the tramp\n')
     choice=input()
     if 'y'in choice:
@@ -88,35 +84,28 @@ with open('scene-4.txt','r') as scene:
     print(scene.read())
     print()
 
-with open('scene-4.txt','r') as scene:
+with open('scene-5.txt','r') as scene:
     five=scene.readlines()
 
 print(five[0])
 if bag==100:
-    for i in range(3,5):
+    for i in range(2,4):
         print(five[i])
 else:
-    for i in range(7,9):
+    for i in range(6,8):
         print(five[i])
-print('*The Player and Detective board a metro to reach Vaas street*\
-Player: You sure we can find them here.\
-Detective: My intel is never wrong.\
-\
-*Both of them reached the building*\
-*They suddenly here a gunshot*\
-*The rush into the building*\
-*The Detective gets shot*')
-
+for i in range(10,18):
+    print(five[i])
 print('\nDo wish to move on??\n')
 choice=input()
 with open('scene-6.txt','r') as scene:
     six = scene.readlines()
 if 'y' in choice:
-    for i in range(5,9):
+    for i in range(4,8):
         print(six[i])
     if bag==100:
         print('\nYou only have two options in this case\n Ok or No\n')
-        for i in range(19,24):
+        for i in range(20,24):
             choice=input()
             choice=choice.lower()
             if 'ok' in choice:
@@ -126,7 +115,7 @@ if 'y' in choice:
                 sys.exit()
     if bag==0:
         print('\nYou only have two options in this case\n Ok or No\n')
-        for i in range(11,16):
+        for i in range(10,16):
             choice=input()
             choice=choice.lower()
             if 'ok' in choice:
